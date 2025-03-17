@@ -1,0 +1,251 @@
+/* 全局样式 */
+body {
+    font-family: "华文楷体", "KaiTi", sans-serif; /* 设置华文楷体为首选字体 */
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    cursor: url('/img/dot.png') auto;
+
+}
+
+/* 页头（导航栏）样式 */
+header {
+    position: fixed; /* 固定在左侧 */
+    top: 0;
+    left: 0;
+    width: 200px; /* 定宽 */
+    height: 100%; /* 高度填满屏幕 */
+    background-color: #f5f5f5; /* 和背景颜色一致 */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 微弱的阴影效果 */
+    z-index: 100; /* 确保导航栏在最上层 */
+}
+
+
+
+/* 导航栏列表样式 */
+nav ul {
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+    width: 100%;
+}
+
+/* 导航项样式 */
+nav ul li {
+    width: 100%;
+    padding: 15px 20px;
+    text-align: left;
+    position: relative;
+    margin-bottom: 10px; /* 分割线和间距 */
+    /* 去掉边框和阴影 */
+    box-shadow: none; 
+    border-radius: 0; /* 去掉圆角 */
+}
+
+/* 分割线样式 */
+nav ul li:nth-child(1) {
+    border-bottom: 2px solid #ddd; /* 在 Home 和 Game 之间添加分割线 */
+}
+
+/* 导航项文本样式 */
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    font-style: italic; /* 使字体倾斜 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), -2px -2px 4px rgba(255, 255, 255, 0.6); /* 添加黑色淡出白色的效果 */
+    font-weight: normal; /* 默认字体加粗为正常 */
+}
+
+/* 鼠标悬停时字体加粗 */
+nav ul li a:hover {
+    text-decoration: underline;
+    font-weight: bold; /* 鼠标悬停时字体加粗 */
+}
+
+/* 点击时字体加粗 */
+nav ul li a:active {
+    font-weight: bold; /* 点击时字体加粗 */
+}
+
+/* index.html 内容样式 */
+.home-content {
+    position: relative; /* 让它相对于默认文档流 */
+    top: auto; /* 移除之前的 top 设定 */
+    transform: none; /* 确保不会受 transform 影响 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 让内容靠左对齐 */
+
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 50px; /* 适当调整间距 */
+    margin-left: -150px; /* 负值让内容左移 */
+    padding-left: 220px
+}
+
+
+/* Game 页面内容样式 */
+.game-content {
+    display: flex;
+    justify-content: flex-start; /* 确保内容从左边开始 */
+    padding-left: 220px; /* 避开左侧的导航栏 */
+    margin-top: 30px; /* 防止顶部内容被遮挡 */
+    padding-right: 20px; /* 可选：保证右侧不溢出 */
+}
+
+/* 用于左右分割的容器 */
+.game-sections {
+    display: flex;
+    justify-content: space-between; /* 左右分割 */
+    width: 100%;
+}
+
+/* 分区样式 */
+.game-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 48%; /* 每个区域占用宽度的 48% */
+}
+
+/* 游戏项样式 */
+.game-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* 每个游戏项之间的间距 */
+    padding: 20px; /* 为框添加内边距 */
+    width: 400px; /* 固定宽度 */
+    height: 220px; /* 固定高度 */
+    border: none; /* 去掉边框 */
+    border-radius: 20px; /* 图片四角保持圆润 */
+    box-shadow: none; /* 去掉淡出黑色的效果 */
+}
+
+
+/* 图片样式 */
+.game-image {
+    width: 170px; /* 控制图片的大小，保持正方形 */
+    height: 170px;
+    border-radius: 20px; /* 圆角效果 */
+    object-fit: cover; /* 确保图片充满容器 */
+    margin-right: 40px; /* 图片和文字之间的间隔 */
+}
+
+
+/* 游戏文字样式 */
+.game-item p {
+    text-align: left;
+    font-size: 24px; /* 字体变大 */
+    color: #fff; /* 字体颜色变为白色 */
+    font-weight: bold; /* 字体加粗 */
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), -2px -2px 4px rgba(0, 0, 0, 0.8); /* 字体边缘淡出黑色 */
+    margin-left: 20px; /* 让文字再往右靠一些 */
+}
+
+
+
+/* 鼠标悬停时，添加阴影效果 */
+.game-item:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+
+/* Logo 和别名区域 */
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* 圆形 Logo 样式 */
+.logo-img {
+    width: 8vw; /* 使用视口宽度的 8% */
+    height: 8vw; /* 高度保持 8% */
+    max-width: 50px;  /* 最大宽度 50px */
+    max-height: 50px; /* 最大高度 50px */
+    border-radius: 50%; /* 圆形 */
+    object-fit: cover; /* 保证图片充满圆形 */
+    margin-right: 20px;
+}
+
+/* 别名样式 */
+.nickname {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 链接区域样式 */
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 链接区域样式 */
+.links-horizontal {
+    display: flex; /* 横向排列 */
+    justify-content: center; /* 居中对齐 */
+    align-items: center; /* 垂直居中 */
+    gap: 8px; /* 控制链接和分隔符之间的间距 */
+}
+
+/* 分隔符样式 */
+.separator {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+
+
+.link-item {
+    display: flex;
+    align-items: center;
+}
+
+.link-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+/* 链接文本样式美化 */
+.link-item a {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* 更现代的字体 */
+    font-size: 20px; /* 字号稍大 */
+    font-weight: bold; /* 加粗 */
+    color: #000305;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out; /* 添加颜色变化效果 */
+}
+
+/* 鼠标悬停时的文字效果 */
+.link-item a:hover {
+    color: #ffffff; /* 文字变白 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), -2px -2px 4px rgba(0, 0, 0, 0.8); /* 字体边缘淡出黑色 */
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 居中对齐 */
+    gap: 30px; /* 元素之间的间距 */
+    width: 100%;
+}
+
+.extra-content { 
+    display: flex; 
+    flex-direction: column; /* 让内容垂直排列 */
+    align-items: flex-start; /* 让内部文本左对齐 */
+    text-align: left; /* 让文本靠左 */
+    width: calc(100% - 220px); /* 避开左侧导航栏 */
+    padding-left: 200px; /* 添加一些间距，不要直接 220px */
+}

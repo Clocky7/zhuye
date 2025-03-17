@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏收藏</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // 添加点击事件处理程序
+        function redirectToGamePage(gameName) {
+            // 根据游戏名跳转到不同的页面
+            switch (gameName) {
+                case 'pcr':
+                    window.location.href = "https://game.bilibili.com/pcr/"; // 替换为实际的游戏页面URL
+                    break;
+                case 'mrfz':
+                    window.location.href = "https://ak.hypergryph.com/"; // 替换为实际的游戏页面URL
+                    break;
+                case 'minecraft':
+                    window.location.href = "https://www.minecraft.net/zh-hans"; // 替换为实际的游戏页面URL
+                    break;
+                case 'cs2':
+                    window.location.href = "https://www.counter-strike.net/cs2"; // 替换为实际的游戏页面URL
+                    break;
+                case 'ba':
+                    window.location.href = "https://bluearchive-cn.com/"; // 替换为实际的游戏页面URL
+                    break;
+                case 'sky':
+                    window.location.href = "https://sky.163.com/"; // 替换为实际的游戏页面URL
+                    break;
+                default:
+                    alert("游戏页面未定义");
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="game.html">Game</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="game-content">
+        <!-- 用于左右分割的容器 -->
+        <div class="game-sections">
+            <!-- 第一区域 -->
+            <section class="game-section">
+                <div class="game-item" onclick="redirectToGamePage('pcr')">
+                    <img src="img/pcr-logo.png" alt="Game Image 1" class="game-image">
+                    <p>公主连结</p>
+                </div>
+                <div class="game-item" onclick="redirectToGamePage('mrfz')">
+                    <img src="img/mrfz-logo.png" alt="Game Image 2" class="game-image">
+                    <p>明日方舟</p>
+                </div>
+                <div class="game-item" onclick="redirectToGamePage('minecraft')">
+                    <img src="img/Minecraft-logo.png" alt="Game Image 1" class="game-image">
+                    <p>Minecraft</p>
+                </div>
+            </section>
+
+            <!-- 第二区域 -->
+            <section class="game-section">
+                <div class="game-item" onclick="redirectToGamePage('cs2')">
+                    <img src="img/CSGO-logo.png" alt="Game Image 3" class="game-image">
+                    <p>CS2</p>
+                </div>
+                <div class="game-item" onclick="redirectToGamePage('ba')">
+                    <img src="img/BA-logo.png" alt="Game Image 4" class="game-image">
+                    <p>Blue archive</p>
+                </div>
+                <div class="game-item" onclick="redirectToGamePage('sky')">
+                    <img src="img/The_sky-logo.jpg" alt="Game Image 1" class="game-image">
+                    <p>光遇</p>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
