@@ -282,6 +282,4 @@ nav ul li a:hover {
     flex-direction: column; /* 让内容垂直排列 */
     align-items: flex-start; /* 让内部文本左对齐 */
     text-align: left; /* 让文本靠左 */
-    width: calc(100% - 220px); /* 避开左侧导航栏 */
-    padding-left: 200px; /* 添加一些间距，不要直接 220px */
 }
