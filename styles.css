@@ -184,7 +184,7 @@ nav ul li a:hover {
     }
 
     .game-item p {
-        font-size: 1rem; /* 小屏幕稍微缩小字体 */
+        font-size: 0.8rem; /* 小屏幕稍微缩小字体 */
     }
 
     .game-image {
@@ -192,17 +192,6 @@ nav ul li a:hover {
         height: auto;
         margin-right: 0;
         margin-bottom: 10px;
-    }
-
-    .extra-content { 
-        display: flex; 
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
-        width: 100%; /* 不再固定宽度 */
-        margin-left: auto;
-        margin-right: auto; /* 使内容居中 */
-        padding-left: 20px; /* 可适当调整 */
     }
     
 }
