@@ -141,7 +141,7 @@ nav ul li a:hover {
 
     .home-content, .game-content {
         margin-top: 80px;
-        margin-left: 0;
+        margin: 0 auto;
         padding-left: 10px;
         padding-right: 10px;
     }
