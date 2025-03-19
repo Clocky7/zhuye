@@ -141,6 +141,7 @@ nav ul li a:hover {
     .extra-content {
         width: 100%; /* 让额外内容区域宽度适应屏幕 */
         padding-left: 0; /* 去除额外的 padding-left */
+        align-items: flex-start; /* 让内部文本左对齐 */
         text-align: left;
         
     }
