@@ -56,7 +56,18 @@ nav ul li a:hover {
 }
 
 /* 主页内容适配 */
-.home-content, .game-content {
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+}
+
+.game-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -141,7 +152,8 @@ nav ul li a:hover {
 
     .home-content, .game-content {
         margin-top: 80px;
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
         flex-direction: column;
         align-items: center;
         padding-left: 10px;
