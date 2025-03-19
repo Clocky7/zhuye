@@ -128,23 +128,29 @@ nav ul li a:hover {
 
 /* 🟢 适配小屏幕 */
 @media (max-width: 768px) {
-    .home-content, .game-content {
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;  /* 居中对齐所有内容 */
+        justify-content: center;  /* 垂直居中 */
         margin-top: 80px; /* 增加顶部的间距，确保导航栏不会覆盖内容 */
-        margin-left: auto; /* 取消左边的 margin */
+        margin-left: auto;
         margin-right: auto;
         padding-left: 10px;
         padding-right: 10px;
-        flex-direction: column;
-        align-items: center;
+        width: 100%;
     }
 
+    /* 确保 extra-content 居中 */
     .extra-content {
-        width: 100%; /* 确保宽度为 100% */
         display: flex;
-        justify-content: center; /* 确保内容水平居中 */
-        align-items: center; /* 确保内容垂直居中 */
-        text-align: center; /* 内容居中显示 */
-        padding-left: 0; /* 去除额外的 padding-left */
+        flex-direction: column; /* 让内容垂直排列 */
+        align-items: center; /* 居中对齐 */
+        justify-content: center; /* 垂直居中 */
+        text-align: center; /* 文本居中 */
+        width: 100%; /* 确保它占据 100% 宽度 */
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .profile {
