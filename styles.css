@@ -130,7 +130,8 @@ nav ul li a:hover {
 @media (max-width: 768px) {
     .home-content, .game-content {
         margin-top: 80px; /* 增加顶部的间距，确保导航栏不会覆盖内容 */
-        margin-left: 0; /* 取消左边的 margin */
+        margin-left: auto; /* 取消左边的 margin */
+        margin-right: auto;
         padding-left: 10px;
         padding-right: 10px;
         flex-direction: column;
@@ -141,6 +142,7 @@ nav ul li a:hover {
         width: 100%; /* 让额外内容区域宽度适应屏幕 */
         padding-left: 0; /* 去除额外的 padding-left */
         text-align: left;
+        
     }
 
     .profile {
