@@ -131,7 +131,7 @@ nav ul li a:hover {
     .home-content {
         display: flex;
         flex-direction: column;
-        align-items: center;  /* 居中对齐所有内容 */
+        align-items: flex-start; /* 让内部文本左对齐 */
         justify-content: center;  /* 垂直居中 */
         margin-top: 80px; /* 增加顶部的间距，确保导航栏不会覆盖内容 */
         margin-left: auto;
@@ -145,7 +145,7 @@ nav ul li a:hover {
     .extra-content {
         display: flex;
         flex-direction: column; /* 让内容垂直排列 */
-        align-items: center; /* 居中对齐 */
+        align-items: flex-start; /* 让内部文本左对齐 */
         justify-content: center; /* 垂直居中 */
         text-align: center; /* 文本居中 */
         width: 100%; /* 确保它占据 100% 宽度 */
