@@ -128,36 +128,19 @@ nav ul li a:hover {
 
 /* 🟢 适配小屏幕 */
 @media (max-width: 768px) {
-    /* 顶部导航栏 */
-    header {
-        width: 100%;
-        height: 60px;
-        position: fixed;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    nav ul {
-        flex-direction: row;
-        justify-content: center;
-        padding: 0;
-    }
-
-    nav ul li {
-        display: inline-block;
-        margin: 0 10px;  /* 让 li 项目之间有一些间距 */
-        padding: 10px;
-    }
-
     .home-content, .game-content {
-        margin-top: 80px;
-        margin-left: auto;
-        margin-right: auto;
-        flex-direction: column;
-        align-items: center;
+        margin-top: 80px; /* 增加顶部的间距，确保导航栏不会覆盖内容 */
+        margin-left: 0; /* 取消左边的 margin */
         padding-left: 10px;
         padding-right: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .extra-content {
+        width: 100%; /* 让额外内容区域宽度适应屏幕 */
+        padding-left: 0; /* 去除额外的 padding-left */
+        text-align: left;
     }
 
     .profile {
@@ -184,7 +167,7 @@ nav ul li a:hover {
     }
 
     .game-item p {
-        font-size: 0.8rem; /* 小屏幕稍微缩小字体 */
+        font-size: 1rem; /* 小屏幕稍微缩小字体 */
     }
 
     .game-image {
@@ -193,7 +176,6 @@ nav ul li a:hover {
         margin-right: 0;
         margin-bottom: 10px;
     }
-    
 }
 
 /* 🟠 超小屏幕适配 */
@@ -209,7 +191,14 @@ nav ul li a:hover {
     nav ul li a {
         font-size: 16px;
     }
+
+    /* 修复额外内容对齐 */
+    .extra-content {
+        width: 100%; /* 确保小屏幕下占满 100% 宽度 */
+        padding-left: 0; /* 取消左边的 padding */
+    }
 }
+
 
 /* 圆形 Logo 样式 */
 .logo-img {
