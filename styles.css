@@ -140,7 +140,9 @@ nav ul li a:hover {
 
     .extra-content {
         width: 100%; /* 确保宽度为 100% */
-        align-items: center; /* 确保内容居中对齐 */
+        display: flex;
+        justify-content: center; /* 确保内容水平居中 */
+        align-items: center; /* 确保内容垂直居中 */
         text-align: center; /* 内容居中显示 */
         padding-left: 0; /* 去除额外的 padding-left */
     }
@@ -179,6 +181,7 @@ nav ul li a:hover {
         margin-bottom: 10px;
     }
 }
+
 
 /* 🟠 超小屏幕适配 */
 @media (max-width: 480px) {
