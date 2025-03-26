@@ -129,59 +129,79 @@ nav ul li a:hover {
 
 /* 适配小屏幕设备（手机端） */
 @media screen and (max-width: 768px) {
-    /* 调整主页面内容的 margin-top，避免被导航栏遮挡 */
-    main {
-        padding-top: 80px; /* 添加顶部空间 */
+    /* 确保导航栏不遮挡内容 */
+    body {
+        padding-top: 60px; /* 给页面顶部留出空间，避免被固定的导航栏遮挡 */
     }
 
-    /* 确保导航栏不会遮挡页面 */
+    /* 固定导航栏，确保其不会遮住内容 */
     nav {
-        position: fixed; /* 固定导航栏 */
+        position: fixed;
         top: 0;
         left: 0;
-        height: 100%;
-        width: 60px; /* 调整导航栏宽度 */
+        width: 100%;
+        height: 60px; /* 导航栏高度 */
         background-color: #f5f5f5;
-        border-right: 2px solid rgba(0, 0, 0, 0.1); /* 添加右侧淡出效果 */
+        z-index: 10; /* 确保导航栏显示在页面内容之上 */
+    }
+
+    nav ul {
         display: flex;
-        flex-direction: column;
+        justify-content: space-around;
         align-items: center;
-        z-index: 10; /* 保证导航栏在页面内容之上 */
+        height: 100%;
+        padding: 0;
+        margin: 0;
     }
 
-    /* 调整主内容的 margin-left，确保内容不被导航栏遮挡 */
-    main {
-        margin-left: 70px; /* 预留导航栏的空间 */
-        padding: 20px;
-    }
-
-    /* 导航链接的样式 */
+    /* 导航项的样式 */
     nav ul li a {
+        font-size: 14px; /* 调整字体大小 */
         padding: 10px;
-        font-size: 14px; /* 调整字体大小以适应小屏幕 */
     }
 
-    /* 游戏页面：确保图标不太大，适应手机屏幕 */
-    .game-image {
-        width: 80px; /* 减小图标的大小 */
-        height: 80px;
+    /* 给主内容留出顶部空间 */
+    main {
+        padding-top: 80px; /* 给主内容添加顶部间距，避免被导航栏遮挡 */
+    }
+
+    /* 游戏页面：保持原有布局，确保图标和文字居中 */
+    .game-sections {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 20px;
     }
 
     .game-section {
-        flex-direction: row; /* 改为横向排列 */
-        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 48%; /* 每列占据屏幕的 48%，让两列游戏并排显示 */
+        margin-bottom: 20px;
     }
 
     .game-item {
-        width: 45%; /* 确保每个游戏块不超过屏幕宽度 */
-        margin: 10px 0;
         text-align: center;
+        width: 100%;
     }
 
-    /* 处理其他可能的布局问题 */
+    .game-image {
+        width: 100px; /* 缩小游戏图标尺寸 */
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    /* 确保游戏名称不被遮挡 */
+    .game-item p {
+        font-size: 14px;
+    }
+
+    /* 使游戏项在手机端仍然排布整齐 */
     .game-sections {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 }
 
