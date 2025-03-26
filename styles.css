@@ -254,6 +254,10 @@ nav ul li a:hover {
         flex-wrap: wrap;
         justify-content: space-between;
     }
+    
+    .game-content {
+        margin-left: -20px; /* 负值表示向左移动，调整数值以适配你的需求 */
+    }
 }
 
 
