@@ -240,7 +240,6 @@ nav ul li a:hover {
 
     .game-image {
         width: 80%; /* 让图片在手机上更合适 */
-        max-width: 300px; /* 设置最大宽度，避免过大 */
     }
     
     .game-content {
