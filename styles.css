@@ -219,40 +219,25 @@ nav ul li a:hover {
     /* 游戏页面：保持原有布局，确保图标和文字居中 */
     .game-sections {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-top: 20px;
+        flex-direction: column; /* 让所有内容纵向排列 */
+        align-items: center; /* 居中对齐 */
     }
 
     .game-section {
+        width: 100%; /* 让内容占满整个宽度 */
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 48%; /* 每列占据屏幕的 48%，让两列游戏并排显示 */
-        margin-bottom: 20px;
+        flex-direction: column; /* 让单个游戏项也纵向排列 */
+        align-items: center; /* 图片和文字居中 */
     }
 
     .game-item {
-        text-align: center;
-        width: 100%;
+        text-align: center; /* 文字居中 */
+        margin-bottom: 20px; /* 增加间距 */
     }
 
     .game-image {
-        width: 100px; /* 缩小游戏图标尺寸 */
-        height: 100px;
-        margin-bottom: 10px;
-    }
-
-    /* 确保游戏名称不被遮挡 */
-    .game-item p {
-        font-size: 14px;
-    }
-
-    /* 使游戏项在手机端仍然排布整齐 */
-    .game-sections {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        width: 80%; /* 让图片在手机上更合适 */
+        max-width: 300px; /* 设置最大宽度，避免过大 */
     }
     
     .game-content {
