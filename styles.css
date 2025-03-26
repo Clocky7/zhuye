@@ -129,77 +129,44 @@ nav ul li a:hover {
 
 /* 适配小屏幕设备（手机端） */
 @media screen and (max-width: 768px) {
-    /* 导航栏固定在顶部 */
-    body {
-        padding-top: 60px; /* 给页面内容顶部留出空间 */
+    /* 隐藏桌面端导航栏 */
+    .desktop-nav {
+        display: none;
     }
 
-    /* 固定导航栏 */
-    nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #f5f5f5;
-        z-index: 10;
-    }
-
-    /* 确保导航栏项居中显示 */
-    nav ul {
+    /* 为手机端添加居中按钮 */
+    .mobile-nav {
         display: flex;
-        justify-content: space-around; /* 确保导航项居中 */
+        justify-content: center;
         align-items: center;
-        height: 60px; /* 导航栏高度 */
-        padding: 0;
-        margin: 0;
+        margin-top: 20px;
     }
 
-    nav ul li {
-        list-style: none;
+    .mobile-nav button {
+        background-color: #f5f5f5;
+        border: 1px solid #333;
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 0 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
     }
 
-    nav ul li a {
-        font-size: 14px;
-        padding: 10px;
+    .mobile-nav button:hover {
+        background-color: #ddd;
     }
 
     /* 给主内容留出顶部间距，避免被固定的导航栏遮挡 */
     main {
-        padding-top: 80px;
-    }
-
-    /* 游戏页面适配 */
-    .game-sections {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-top: 20px;
-    }
-
-    .game-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 48%; /* 每列占屏幕 48% */
-        margin-bottom: 20px;
-    }
-
-    .game-item {
-        text-align: center;
-        width: 100%;
-    }
-
-    .game-image {
-        width: 100px;
-        height: 100px;
-        margin-bottom: 10px;
-    }
-
-    /* 游戏名称调整 */
-    .game-item p {
-        font-size: 14px;
+        padding-top: 40px;
     }
 }
+
+/* 隐藏手机端按钮，在桌面端 */
+.mobile-nav {
+    display: none; /* 在桌面端隐藏手机端按钮 */
+}
+
 
 
 /* 🟠 超小屏幕适配 */
@@ -307,3 +274,26 @@ nav ul li a:hover {
     align-items: flex-start; /* 让内部文本左对齐 */
     text-align: left; /* 让文本靠左 */
 }
+
+
+/* 默认样式 - 适用于桌面端 */
+.desktop-nav {
+    display: block; /* 默认显示桌面端导航栏 */
+}
+
+.desktop-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.desktop-nav ul li a {
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+}
+
+
