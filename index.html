@@ -6,33 +6,16 @@
     <title>Clocky7</title>
     <link rel="icon" href="img/arknights-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
-    <script>
-        // 添加点击事件处理程序
-        function redirectToPage(page) {
-            if (page === 'home') {
-                window.location.href = "index.html";
-            } else if (page === 'game') {
-                window.location.href = "game.html";
-            }
-        }
-    </script>
 </head>
 <body>
     
     <header>
-        <!-- 手机端取消导航栏 -->
-        <nav class="desktop-nav">
+        <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="game.html">Game</a></li>
             </ul>
         </nav>
-        
-        <!-- 手机端添加 Home 和 Game 按钮 -->
-        <div class="mobile-nav">
-            <button onclick="redirectToPage('home')">Home</button>
-            <button onclick="redirectToPage('game')">Game</button>
-        </div>
     </header>
 
     <main class="home-content">
@@ -57,24 +40,27 @@
             </div>
     
             <!-- 额外内容 -->
-            <div class="extra-content"> 
-                <h1>About me</h1>
-                <p>本人是一个兴趣使然的博主，在学习的过程中发现了很多有意思的问题，得到了很多感悟，希望将这些东西向世界分享。<br>
-                请务必对未来有所期待，明天会有什么，没有人知道，正因此未来才值得每个人向往。</p>
+            
+        <div class="extra-content"> 
+            <h1>About me</h1>
+            <p>本人是一个兴趣使然的博主，在学习的过程中发现了很多有意思的问题，得到了很多感悟，希望将这些东西向世界分享。<br>请务必对未来有所期待，明天会有什么，没有人知道，正因此未来才值得每个人向往。</p>
 
-                <h1>Areas involved</h1>
-                <p>- Hexo<br>
-                - Python<br>
-                - HTML<br>
-                - Jupyter Notebook<br>
-                - Markdown
-                </p>
+            <h1>Areas involved</h1>
+                
+            <p>- Hexo<br>
+            - Python<br>
+            - HTML<br>
+            - jupter notebook<br>
+            - Markdown
+            </p>
 
-                <h1>本站链接</h1>
-                <p>你可以访问我的博客和 GitHub 来认识我，博客上也会更新更多生活上的内容。<br>
-                那么祝你 Good morning，Good noon，and Good night。</p>
-            </div>
+            <h1>本站链接</h1>
+            <p>你可以访问我的博客和github来认识我，博客上也会更新更多生活上的内容。<br>
+            那么祝你Good morning，Good noon，and Good night。</p>
+        </div>
+            
         </div>
     </main>
+    
 </body>
 </html>
