@@ -239,7 +239,7 @@ nav ul li a:hover {
     }
 
     .game-image {
-        width: 60%; /* 控制图片宽度 */
+        width: 80%; /* 控制图片宽度 */
         max-width: 500px;
         display: block; /* 避免 inline 元素导致的额外间距 */
         margin: 0 auto; /* 确保图片完全居中 */
