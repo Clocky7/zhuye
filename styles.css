@@ -143,58 +143,34 @@ nav ul li a:hover {
 
         
     /* 创建按钮并设置它们的位置和样式 */
-    .nav-buttons {
-        display: flex; /* 水平排列按钮 */
-        justify-content: center; /* 水平居中 */
-        align-items: center; /* 垂直居中 */
-        gap: 20px; /* 按钮之间的间隔 */
-        position: fixed; /* 固定位置 */
-        top: 0; /* 靠近页面顶部 */
-        left: 0;
-        width: 100%; /* 让容器占满全宽 */
-        padding: 10px 0; /* 给容器一定的上下内边距 */
-        background-color: transparent; /* 背景透明 */
-        z-index: 9999; /* 确保按钮在最上层 */
+    .fixed-buttons {
+        position: fixed;  /* 固定在页面上 */
+        top: 0;           /* 贴紧页面顶部 */
+        left: 50%;        /* 让整个按钮组居中 */
+        transform: translateX(-50%); /* 向左偏移自身 50% 宽度，确保真正居中 */
+        display: flex;    /* 让两个按钮横向排列 */
+        gap: 10px;        /* 按钮之间的间距 */
+        padding: 10px;
+        background: transparent; /* 背景透明 */
+        z-index: 1000;    /* 确保按钮层级在最上方 */
     }
 
-    .nav-buttons a {
-        display: block;
-        padding: 10px 20px;
-        background-color: transparent; /* 按钮背景透明 */
+    .fixed-buttons a {
+        text-decoration: none; /* 取消下划线 */
         color: black; /* 文字颜色为黑色 */
-        font-size: 18px;
-        text-decoration: none;
-        border: 2px solid black; /* 黑色边框 */
-        border-radius: 5px;
-        text-align: center;
-        transition: all 0.3s ease;
-        position: relative;
+        font-weight: bold; /* 字体加粗 */
+        font-size: 16px; /* 字体大小 */
+        padding: 8px 16px; /* 按钮内边距 */
+        border: 2px solid rgba(255, 255, 255, 0.6); /* 按钮边框，白色淡出 */
+        border-radius: 5px; /* 按钮圆角 */
+        background: transparent; /* 背景透明 */
+        transition: all 0.3s ease-in-out;
     }
 
-    /* 文字边缘淡出效果 */
-    .nav-buttons a::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(255, 255, 255, 0.8); /* 白色的淡出效果 */
-        z-index: -1;
-        border-radius: 5px;
-        opacity: 0;
-        transition: opacity 0.3s ease;
+    .fixed-buttons a:hover {
+        background: rgba(255, 255, 255, 0.2); /* 悬停时轻微变亮 */
     }
 
-    .nav-buttons a:hover::before {
-        opacity: 1; /* 鼠标悬停时，边缘变为淡出的白色效果 */
-    }
-
-    .nav-buttons a:hover {
-        background-color: transparent; /* 背景透明 */
-        color: black; /* 文字颜色 */
-        border-color: black; /* 边框颜色 */
-    }
 
     nav ul {
         display: flex;
