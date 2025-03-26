@@ -239,8 +239,17 @@ nav ul li a:hover {
     }
 
     .game-image {
-        width: 60%; /* 让图片在手机上更合适 */
-        max-width: 400px; 
+        width: 80%; /* 控制图片宽度 */
+        max-width: 300px;
+        display: block; /* 避免 inline 元素导致的额外间距 */
+        margin: 0 auto; /* 确保图片完全居中 */
+    }
+
+    .game-item p {
+        margin-top: 10px; /* 给文字与图片间增加一点间距 */
+        font-size: 16px; /* 调整字体大小 */
+        width: 100%; /* 让文字占满整个宽度 */
+        text-align: center; /* 文字水平居中 */
     }
     
     .game-content {
