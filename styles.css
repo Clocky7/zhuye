@@ -127,81 +127,82 @@ nav ul li a:hover {
     margin-right: 40px;
 }
 
-/* 适配小屏幕设备（手机端） */
+/* 针对手机端的样式调整 */
 @media screen and (max-width: 768px) {
-    /* 确保导航栏不遮挡内容 */
-    body {
-        padding-top: 60px; /* 给页面顶部留出空间，避免被固定的导航栏遮挡 */
-    }
-
-    /* 固定导航栏，确保其不会遮住内容 */
-    nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 60px; /* 导航栏高度 */
-        background-color: #f5f5f5;
-        z-index: 10; /* 确保导航栏显示在页面内容之上 */
-    }
-
-    nav ul {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 100%;
-        padding: 0;
-        margin: 0;
-    }
-
-    /* 导航项的样式 */
-    nav ul li a {
-        font-size: 14px; /* 调整字体大小 */
+    header {
         padding: 10px;
     }
 
-    /* 给主内容留出顶部空间 */
-    main {
-        padding-top: 80px; /* 给主内容添加顶部间距，避免被导航栏遮挡 */
+    nav ul {
+        flex-direction: column;
     }
 
-    /* 游戏页面：保持原有布局，确保图标和文字居中 */
-    .game-sections {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    /* 个人信息部分 */
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile img.logo-img {
+        width: 40vw; /* 更适配手机端宽度 */
+        max-width: 80px;
+    }
+
+    .nickname {
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+
+    /* 链接部分 */
+    .links-horizontal {
+        flex-direction: column;
         margin-top: 20px;
     }
 
-    .game-section {
-        display: flex;
+    .link-item {
+        margin: 10px 0;
+    }
+
+    .separator {
+        display: none; /* 在手机端隐藏分隔符 */
+    }
+
+    /* 额外内容 */
+    .extra-content {
+        padding: 15px;
+    }
+
+    .extra-content h1 {
+        font-size: 1.2rem;
+    }
+
+    .extra-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* 针对手机端优化游戏页面布局 */
+@media screen and (max-width: 768px) {
+    .game-sections {
         flex-direction: column;
         align-items: center;
-        width: 48%; /* 每列占据屏幕的 48%，让两列游戏并排显示 */
-        margin-bottom: 20px;
     }
 
-    .game-item {
-        text-align: center;
-        width: 100%;
+    .game-section {
+        width: 80%;
     }
 
-    .game-image {
-        width: 100px; /* 缩小游戏图标尺寸 */
-        height: 100px;
-        margin-bottom: 10px;
-    }
-
-    /* 确保游戏名称不被遮挡 */
-    .game-item p {
-        font-size: 14px;
-    }
-
-    /* 使游戏项在手机端仍然排布整齐 */
-    .game-sections {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+    .game-item img {
+        width: 90%;
     }
 }
 
