@@ -239,7 +239,8 @@ nav ul li a:hover {
     }
 
     .game-image {
-        width: 80%; /* 让图片在手机上更合适 */
+        width: 60%; /* 让图片在手机上更合适 */
+        max-width: 400px; 
     }
     
     .game-content {
