@@ -148,6 +148,7 @@ nav ul li a:hover {
         flex-direction: row; /* 设置子元素水平方向排列 */
         align-items: center; /* 垂直居中子元素 */
         justify-content: center; /* 水平居中子元素 */
+        z-index: 0;
     }
 
     nav ul {
