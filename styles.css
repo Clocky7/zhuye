@@ -231,6 +231,9 @@ nav ul li a:hover {
     }
 
     .game-item {
+        display: flex;
+        flex-direction: column; /* 让图片和文字竖着排列 */
+        align-items: center; /* 居中对齐 */
         text-align: center; /* 文字居中 */
         margin-bottom: 20px; /* 增加间距 */
     }
