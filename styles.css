@@ -141,6 +141,7 @@ nav ul li a:hover {
         display: none;
     }
 
+        
     /* 创建按钮并设置它们的位置和样式 */
     .nav-buttons {
         display: flex; /* 水平排列按钮 */
