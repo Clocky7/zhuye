@@ -134,12 +134,12 @@ nav ul li a:hover {
         font-family: "华文楷体", "KaiTi", sans-serif;
         margin: 0;
         padding: 0;
-        font-size: 14px;  /* 修改全局字体大小 */
+        font-size: 12px;  /* 修改全局字体大小 */
         background-color: #f5f5f5;
     }
 
     p, span, a {
-        font-size: 14px;  /* 调整文本、超链接和 span 的字体 */
+        font-size: 12px;  /* 调整文本、超链接和 span 的字体 */
     }
 
     header {
@@ -149,6 +149,7 @@ nav ul li a:hover {
     .home-content {
         margin-left: -10px; /* 负值表示向左移动，调整数值以适配你的需求 */
     }
+
         
     /* 创建按钮并设置它们的位置和样式 */
     .fixed-buttons {
