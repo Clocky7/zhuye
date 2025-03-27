@@ -159,8 +159,8 @@ nav ul li a:hover {
         text-decoration: none; /* 取消下划线 */
         color: black; /* 文字颜色为黑色 */
         font-weight: bold; /* 字体加粗 */
-        font-size: 14px; /* 字体大小 */
-        padding: 6px 12px; /* 按钮内边距 */
+        font-size: 10px; /* 字体大小 */
+        padding: 5px 10px; /* 按钮内边距 */
         border: 2px solid rgba(255, 255, 255, 0.6); /* 按钮边框，白色淡出 */
         border-radius: 5px; /* 按钮圆角 */
         background: transparent; /* 背景透明 */
@@ -223,7 +223,7 @@ nav ul li a:hover {
 
     .game-item p {
         margin-top: 10px; /* 给文字与图片间增加一点间距 */
-        font-size: 14px; /* 调整字体大小 */
+        font-size: 10px; /* 调整字体大小 */
         width: 100%; /* 让文字占满整个宽度 */
         text-align: center; /* 文字水平居中 */
     }
