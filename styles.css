@@ -146,6 +146,9 @@ nav ul li a:hover {
         display: none;
     }
 
+    .home-content {
+        margin-left: -10px; /* 负值表示向左移动，调整数值以适配你的需求 */
+    }
         
     /* 创建按钮并设置它们的位置和样式 */
     .fixed-buttons {
